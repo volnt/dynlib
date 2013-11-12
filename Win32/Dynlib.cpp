@@ -16,7 +16,7 @@ void	*Dynlib::load(void *handle, const char *sym)
 {
   void	*func = NULL;
 
-  func = (void *) GetProcAddr(handle, sym);
+  func = (void *) GetProcAddr((HMODULE) handle, sym);
   return (func);
 }
 
@@ -24,7 +24,7 @@ bool	Dynlib::close(void *handle)
 {
   bool	closed = false;
 
-  closed = (bool) FreeLibrary(handle);
+  closed = (bool) FreeLibrary((HMODULE) handle);
   return (closed);
 }
 
