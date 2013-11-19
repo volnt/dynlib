@@ -1,4 +1,4 @@
-dynlib
+Dynlib
 ======
 
-Portable abstraction for dynamic libraries
+Portable abstraction for dynamic libraries (supports windows & linux systems)
