@@ -24,7 +24,7 @@ bool	Dynlib::close(void *handle)
 {
   bool	closed = false;
 
-  closed = (bool) dlclose(handle);
+  closed = (dlclose(handle) == 0);
   return (closed);
 }
 

@@ -24,7 +24,7 @@ bool	Dynlib::close(void *handle)
 {
   bool	closed = false;
 
-  closed = (bool) FreeLibrary((HMODULE) handle);
+  closed = (FreeLibrary((HMODULE) handle) != 0);
   return (closed);
 }
 
