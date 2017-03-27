@@ -1,6 +1,5 @@
 #if defined(_WIN32) || defined(__WIN32__)
 
-#include <unistd.h>
 #include <windows.h>
 #include "Dynlib.hpp"
 
@@ -16,7 +15,7 @@ void	*Dynlib::load(void *handle, const char *sym)
 {
   void	*func = NULL;
 
-  func = (void *) GetProcAddr((HMODULE) handle, sym);
+  func = (void *) GetProcAddress((HMODULE) handle, sym);
   return (func);
 }
 
